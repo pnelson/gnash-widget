@@ -1,0 +1,8 @@
+Gnash-Widget
+============
+
+This JavaScript widget complements https://github.com/pnelson/gnash. It pulls in
+the Grouse Grind stats via script injection and tosses the data into Chart.js to
+build a beautiful graph.
+
+Copyright (c) 2013 by Philip Nelson. See LICENSE for details.
