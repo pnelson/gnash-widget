@@ -84,3 +84,17 @@ var Gnash = Gnash || (function() {
   return new Gnash('gnash-root');
 
 })();
+
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString
+if (!Date.prototype.toISOString) {
+  Date.prototype.toISOString = function() {
+    return this.getUTCFullYear()
+      + '-' + Gnash.pad(this.getUTCMonth() + 1)
+      + '-' + Gnash.pad(this.getUTCDate())
+      + 'T' + Gnash.pad(this.getUTCHours())
+      + ':' + Gnash.pad(this.getUTCMinutes())
+      + ':' + Gnash.pad(this.getUTCSeconds())
+      + '.' + String((this.getUTCMilliseconds() / 1000).toFixed(3)).slice(2, 5)
+      + 'Z';
+  };
+}
