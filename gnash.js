@@ -81,6 +81,6 @@ var Gnash = Gnash || (function() {
     return n < 10 ? '0' + n : n;
   };
 
-  new Gnash('gnash-root');
+  return new Gnash('gnash-root');
 
 })();
